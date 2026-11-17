@@ -4,18 +4,18 @@
 To create a GitHub Actions workflow you need a folder called `.github/workflows`
 
 # Simple Github Actions Workflow
-## Workflow [No indentation required for naming the workflow]
-## Should have `Name`
+Workflow [No indentation required for naming the workflow]
+Should have `Name`
 name: Hello
-## On tells when the workflow should run (Give indentation by Tab)
+On tells when the workflow should run (Give indentation by Tab)
 on:
   workflow_dispatch:
     
 
 ## Jobs
-## Should be inside `Workflow`
-## job tells what workflow should do. There can be one or more than one jobs, hence we write jobs.
-## jobs is an object so need indentation. 
+ Should be inside `Workflow`
+job tells what workflow should do. There can be one or more than one jobs, hence we write jobs.
+jobs is an object so need indentation. 
 jobs:
   ## 1st job (Give indentation)
   say-hello:
@@ -26,8 +26,8 @@ jobs:
       - name: say hello to everyone
         run: echo "Hello Doston"
 
-# Steps
-# Should be inside `Jobs`
+## Steps
+Should be inside `Jobs`
 
-# Actions
-# Should be inside `Steps`
+## Actions
+Should be inside `Steps`
