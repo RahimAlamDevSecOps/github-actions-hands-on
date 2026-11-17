@@ -3,7 +3,7 @@
 ## 1. Workflows
 To create a GitHub Actions workflow you need a folder called `.github/workflows`
 
-# Simple Github Actions Workflow
+# Concepts of Github Actions Workflow
 Workflow [No indentation required for naming the workflow]
 Should have `Name`
 name: Hello
@@ -31,3 +31,33 @@ Should be inside `Jobs`
 
 ## Actions
 Should be inside `Steps`
+
+
+## GitHub Actions CICD Workflows Concepts
+name: CIDC 
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the code
+        run: echo "Cloning the code"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build using docker
+        run: echo "Building using docker"
+  
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running test cases
+        run: echo "Testing the app"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploying on the machine
+        run: echo "Deploying the code"
