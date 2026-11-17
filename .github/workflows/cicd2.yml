@@ -1,0 +1,34 @@
+name: CIDC2
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the code
+        run: echo "Cloning the code"
+  build:
+    # Untill and unless there is no code there should not be build
+    needs: [code]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build using docker
+        run: echo "Building using docker"
+  
+  test:
+    # Untill and unless there is no build there should not be test.
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running test cases
+        run: echo "Testing the app"
+  deploy:
+    # Deploy stage need both build and test. Untill and unless there is no successful of build and test there should not be deploy.
+    needs: [build,test]test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploying on the machine
+        run: echo "Deploying the code"
+  
