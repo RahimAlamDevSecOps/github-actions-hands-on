@@ -13,7 +13,7 @@ on:
     
 
 ## Jobs
- Should be inside `Workflow`
+Should be inside `Workflow`
 job tells what workflow should do. There can be one or more than one jobs, hence we write jobs.
 jobs is an object so need indentation. 
 jobs:
