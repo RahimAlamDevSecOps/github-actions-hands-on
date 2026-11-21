@@ -2,6 +2,7 @@
 # Flask App.
 # Formatting add in Github Action workflow
 from flask import Flask, render_template
+
 app = Flask(__name__)
 
 
