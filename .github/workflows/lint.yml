@@ -17,7 +17,7 @@ jobs:
         # Install Python
       - name: Setup/install Python
         uses: actions/setup-python@v7
-          with:
+        with:
           python-version: "3.14"
         # This step will install the linting tool
       - name: Install Linter
