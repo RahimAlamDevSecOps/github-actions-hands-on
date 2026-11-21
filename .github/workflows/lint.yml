@@ -16,8 +16,8 @@ jobs:
         # This step will install the linting tool
       - name: Install Linter
         run: pip install ruff
-        # This step will checks python codes for error and coding issues 
-      - name: Run Linter
+        # This step will check python code errors and coding issues
+      - name: Check code
         run: ruff check .
         
 
