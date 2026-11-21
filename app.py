@@ -1,5 +1,6 @@
 # This code is from https://github.com/RahimAlamDevSecOps/github-actions-hands-on.git
 # Flask App.
+# Formatting add in Github Action workflow
 from flask import Flask, render_template
 app = Flask(__name__)
 
