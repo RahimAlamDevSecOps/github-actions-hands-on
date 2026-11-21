@@ -19,6 +19,9 @@ jobs:
         # This step will check python code errors and coding issues
       - name: Check code
         run: ruff check .
+      - name: Check formatting
+        run: ruff format --check
+      
         
 
 
